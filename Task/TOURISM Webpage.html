@@ -1,0 +1,102 @@
+<html>
+<head>
+<title> Time to Travel </title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="stylesheet" href="tourism.css"/>
+<script>
+	function validform(){
+	var password=document.myform.pass1.value
+		   var cpassword=document.myform.pass2.value
+		if(password.length<6){
+		         alert("Enter minimum 6 digits in Password")
+		         return false
+		   }
+		  if(password==cpassword){
+		       return true
+             }
+          else{
+		   alert("password & confirm-password must be same")
+		    return false 
+		   } 
+	        var Name=document.myform.name1.value
+	   
+	           if(Name=="null"||Name==""||Name==[ ]){
+			          alert("enter a proper name")
+			          return false
+			   }
+			 var Email=document.myform.email.value
+			 var atposition=Email.indexOf("@")
+			 var dotposition=Email.lastIndexOf(".")
+	   
+	    if(atposition<1 || dotposition<atposition+2 || dotposition+       2>=Email.lenght){
+		     alert("enter a proper email")
+			  return false
+		    }
+			
+     }		   
+</script>
+</head>
+<body>
+<nav>
+<img src="tourismlogo.jpg"/>
+<ul>
+<li> Home </li>
+<li> Services </li>
+<li> Experiences </li>
+<li> Blog </li>
+<li> Contact </li>
+</ul>
+</nav>
+<header>
+<img src="tourismimage.jpg" width="100%" height="350px"/>
+</header>
+<content class="flex-container">
+<div class="flex-item">
+<img src="beachimage.jpg" align="center"/>
+<p><b> Beaches </b></p>
+<p> Beaches man-made <br> and natural are<br> available in our<br> travel tourism for<br> our costumers and <br> with available<br> resorts around</p>
+</div>
+<div class="flex-item">
+<img src="fleximg1.jpg" width="250px" align="center"/>
+<p><b> Hotels </b></p>
+<p> We offer different <br> viewable places with <br> respective hotels are <br> booked beforehand <br> to our costumers and scenarios</p>
+</div>
+<div class="flex-item">
+<img src="fleximg2.jpg" width="280px" height="50%" align="center"/>
+<p><b> Adventures </b></p>
+<p> We offer different adventurous <br>places for the costumers<br> who like to go for <br> a voyage and to <br> look around the world </p>
+</div>
+</content>
+<section>
+<div id="s1">
+<br>
+<br>
+<h2 align="center"> About us </h2><br>
+<p align="center"> On this site, you can get discounts on almost anything,<br> including flights, hotel, cars, activities, and more. </p>
+<p align="center"> One of the most well-known travel websites in the world,<br> Expedia has a robust rewards program with amenities<br> and discounts you won’t find anywhere else.</p>
+<p align="center"> This website is a little different. It offers an email list that <br>tracks flights and their prices. If there is a change in prices, you’ll <br>get an email with information that could save you a lot of money.<br></p>
+<p align="center"> This site highlights travel and luxe living but lists 12 unique and<br> unusual places to stay around the world that will appeal to all your senses.<br> Luxury resorts underwater or capsule suites hanging from cliffs<br> are just some of the experiences you can enjoy.</p>
+</div>
+<aside>
+<img src="titleimage.jpg" width="630px" height="420px"/>
+</aside>
+</section>
+<form name="myform" onsubmit="return validform()" id="s3">
+	<br>
+	<label> User name: </label><br>
+	<input type="text" name="name1" placeholder="username" pattern="[a-zA-Z ]{3,}" required/><br> 
+	<label> Email Address: </label><br>
+	<input type="email" placeholder="type your email address here" pattern="[a-z0-9 @.]{1,}" required/><br>
+	<label> Password: </label><br>
+	<input type="password" name="pass1" placeholder="Type your password here" required/>
+	<span style="color:blue;float:right;"> Forgot password? </span>
+	<br>
+	<label> Confirm Password: </label><br>
+	<input type="password" name="pass2" placeholder="Type your password again" required/><br>
+	<button> Login </button>
+</form>
+<hr>
+<p align="center"><b> © 2023 Time To Travel Tourism | All rights reserved </b></p>
+</body>
+</html>
